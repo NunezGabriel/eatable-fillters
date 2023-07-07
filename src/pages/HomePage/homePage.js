@@ -5,7 +5,7 @@ import CategoriesMain from "./categoriesMain";
 import SearchMain from "./searchMain";
 import { useProducts } from "../../context/products-context";
 import { useState, useEffect } from "react";
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 
 function HomePage() {
   const { setTitle } = useOutletContext();
@@ -20,8 +20,6 @@ function HomePage() {
     const { value } = event.target;
     setSearch(value);
   }
-
-  const navigate = useNavigate();
 
   return (
     <Styled.Container>

@@ -2,7 +2,6 @@ import HomePage from "./pages/HomePage";
 import ProductDetail from "./pages/ProductDetail";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import CheckoutPage from "./pages/checkout-page";
 import { ProductsProvider } from "./context/products-context";
 import { useEffect, useState } from "react";
 import { localStorageKey } from "./config";
@@ -10,7 +9,6 @@ import ProfilePage from "./pages/profile";
 
 function AuthenticatedApp() {
   const [cartProducts, setCartProducts] = useState([]);
-  const [orderData, setOrderData] = useState({});
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem(localStorageKey));
@@ -24,10 +22,6 @@ function AuthenticatedApp() {
     localStorage.setItem(localStorageKey, JSON.stringify(newCartProducts));
   }
 
-  function handleOrderData(value) {
-    setOrderData(value);
-  }
-
   return (
     <ProductsProvider>
       <Routes>
@@ -38,11 +32,6 @@ function AuthenticatedApp() {
             element={<ProductDetail onAddCart={handleCart} />}
           />
           <Route path="/profile" element={<ProfilePage />} />
-
-          <Route
-            path="/checkout"
-            element={<CheckoutPage orderData={orderData} />}
-          />
         </Route>
       </Routes>
     </ProductsProvider>
