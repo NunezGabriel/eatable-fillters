@@ -5,7 +5,6 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { StyledButton } from "../components/button";
 import { InputContainer, Label } from "../components/input";
 import { useAuth } from "../context/auth-context";
-// import { updateUser } from "../services/users-service";
 import { typography } from "../styles/typography";
 import "../components/styles.css";
 

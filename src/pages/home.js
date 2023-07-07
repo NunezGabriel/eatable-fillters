@@ -1,6 +1,5 @@
 import FoodCard from "../components/FoodCard";
 import { useEffect } from "react";
-import FoodPicture from "../components/FoodPicture";
 
 import { useOutletContext } from "react-router-dom";
 
