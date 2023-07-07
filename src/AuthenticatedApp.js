@@ -8,7 +8,6 @@ import { ProductsProvider } from "./context/products-context";
 import { useEffect, useState } from "react";
 import { localStorageKey } from "./config";
 import ProfilePage from "./pages/profile";
-import HistoryPage from "./pages/history/history-page";
 
 function AuthenticatedApp() {
   const [cartProducts, setCartProducts] = useState([]);
@@ -39,7 +38,6 @@ function AuthenticatedApp() {
             path="/products/:id"
             element={<ProductDetail onAddCart={handleCart} />}
           />
-          <Route path="/history" element={<HistoryPage />} />
           <Route path="/profile" element={<ProfilePage />} />
 
           <Route
