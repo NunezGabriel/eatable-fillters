@@ -1,20 +1,9 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { colors } from "../../styles/colors";
 import { typography } from "../../styles/typography";
 
 export const Message = styled.span`
   ${typography.size.xl}
   ${typography.weigth.semibold}
-`;
-export const CartButton = css`
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: ${colors.gray};
-
-  &:hover {
-    color: ${colors.orange};
-  }
 `;
 
 export const SearchContainer = styled.div`
@@ -24,7 +13,6 @@ export const SearchContainer = styled.div`
   align-items: center;
   gap: 1rem;
 `;
-
 
 export const Container = styled.div`
   display: flex;
@@ -37,7 +25,7 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   gap: 1.375rem;
   height: calc(100vh - 251px);
 `;

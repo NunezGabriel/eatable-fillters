@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import SearchInput from "../../components/SearchInput";
-import { FiShoppingCart } from "react-icons/fi"
 import * as Styled from "./styles";
 import CategoriesMain from "./categoriesMain";
 import SearchMain from "./searchMain";
@@ -19,23 +18,23 @@ function HomePage() {
 
   function handleSearch(event) {
     const { value } = event.target;
-    setSearch(value)
-  };
+    setSearch(value);
+  }
 
   const navigate = useNavigate();
 
   return (
     <Styled.Container>
       <Styled.Header>
-        <SearchInput placeholder="Search" onChange={(handleSearch)} />
-        <FiShoppingCart css={Styled.CartButton} onClick={() => navigate("/cart", { replace: true })} />
+        <SearchInput placeholder="Search" onChange={handleSearch} />
       </Styled.Header>
-      {search === "" ?
-        <CategoriesMain products={products} /> :
+      {search === "" ? (
+        <CategoriesMain products={products} />
+      ) : (
         <SearchMain products={products} search={search} />
-      }
+      )}
     </Styled.Container>
-  )
-};
+  );
+}
 
 export default HomePage;

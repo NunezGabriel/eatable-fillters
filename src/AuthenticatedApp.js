@@ -1,5 +1,4 @@
 import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage/cart-page";
 import ProductDetail from "./pages/ProductDetail";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
@@ -40,10 +39,6 @@ function AuthenticatedApp() {
           />
           <Route path="/profile" element={<ProfilePage />} />
 
-          <Route
-            path="/cart"
-            element={<CartPage handleOrderData={handleOrderData} />}
-          />
           <Route
             path="/checkout"
             element={<CheckoutPage orderData={orderData} />}
