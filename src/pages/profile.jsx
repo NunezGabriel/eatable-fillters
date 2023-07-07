@@ -22,6 +22,10 @@ const StyledFormik = styled(Form)`
   align-items: center;
   gap: 2rem;
   min-width: 258px;
+  margin-bottom: 25px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px
 `;
 
 const InputPersonalInfo = styled(Field)`
@@ -70,7 +74,7 @@ function ProfilePage() {
   }
   return (
     <ContainerProfile>
-      <TextBold>Update your info</TextBold>
+      <TextBold>Update personal details</TextBold>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}

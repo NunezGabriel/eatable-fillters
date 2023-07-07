@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Outlet, NavLink } from "react-router-dom";
-import { CgHome } from "react-icons/cg";
 import { FiUser } from "react-icons/fi";
-import { AiOutlineLeft } from "react-icons/ai";
+import { AiOutlineLeft, AiFillHome } from "react-icons/ai";
 import { LayoutStyles, Header, ItemsNav, Title } from "./styles";
 
 const Layout = () => {
@@ -33,7 +32,7 @@ const Layout = () => {
               to="/"
               className={({ isActive }) => (isActive ? "link-active" : "link")}
             >
-              <CgHome style={{ fontSize: 30 }} />
+              <AiFillHome style={{ fontSize: 30 }} />
             </NavLink>
           </li>
           <li>
