@@ -101,7 +101,7 @@ export const global = css`
     display: flex;
     justify-content: center;
     padding: 1rem;
-    background-color: ${colors.gray};
+    background-color: gray;
     ${typography.size.m}
   }
 
@@ -114,3 +114,5 @@ export const global = css`
     padding: 1.5rem 2.5rem;
   }
 `;
+
+// general background page color:  ${colors.gray}

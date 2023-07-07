@@ -25,11 +25,11 @@ const StyledFormik = styled(Form)`
   min-width: 258px;
 `;
 
-const StyledInputFormik = styled(Field)`
+const InputPersonalInfo = styled(Field)`
   padding: 0.5rem;
   ${typography.size.m};
   border: 0;
-  border-bottom: 2px solid gray;
+  border-bottom: 2px solid #FA4A0C;
   background: transparent;
   outline: none;
 `;
@@ -71,7 +71,7 @@ function ProfilePage() {
   }
   return (
     <ContainerProfile>
-      <TextBold>Update personal details</TextBold>
+      <TextBold>Update your info</TextBold>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
@@ -81,20 +81,20 @@ function ProfilePage() {
           <StyledFormik>
             <InputContainer>
               <Label>Name</Label>
-              <StyledInputFormik type="text" name="name" />
+              <InputPersonalInfo type="text" name="name" />
             </InputContainer>
             <InputContainer>
               <Label>Email</Label>
-              <StyledInputFormik type="email" name="email" />
+              <InputPersonalInfo type="email" name="email" />
               <ErrorMessage name="email" component="p" className="error" />
             </InputContainer>
             <InputContainer>
               <Label>Phone</Label>
-              <StyledInputFormik type="text" name="phone" />
+              <InputPersonalInfo type="text" name="phone" />
             </InputContainer>
             <InputContainer>
               <Label>Address</Label>
-              <StyledInputFormik type="text" name="address" />
+              <InputPersonalInfo type="text" name="address" />
             </InputContainer>
             <StyledButton type="submit">Update</StyledButton>
           </StyledFormik>
