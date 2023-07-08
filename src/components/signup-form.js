@@ -35,7 +35,8 @@ export default function SignupForm() {
 
   function handleFormChange(event) {
     const { name, value } = event.target;
-
+    console.log(name);
+    console.log(value);
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: "" });
   }

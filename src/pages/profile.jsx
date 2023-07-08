@@ -84,20 +84,20 @@ function ProfilePage() {
           <StyledFormik>
             <InputContainer>
               <Label>Name</Label>
-              <InputPersonalInfo type="text" name="name" />
+              <InputPersonalInfo type="text" name="name" value={"your name"}/>
             </InputContainer>
             <InputContainer>
               <Label>Email</Label>
               <InputPersonalInfo type="email" name="email" />
-              <ErrorMessage name="email" component="p" className="error" />
+              <ErrorMessage name="email" component="p" className="error"/>
             </InputContainer>
             <InputContainer>
               <Label>Phone</Label>
-              <InputPersonalInfo type="text" name="phone" />
+              <InputPersonalInfo type="text" name="phone" value={"your phone"}/>
             </InputContainer>
             <InputContainer>
               <Label>Address</Label>
-              <InputPersonalInfo type="text" name="address" />
+              <InputPersonalInfo type="text" name="address" value={"fondo de vikini c-12"}/>
             </InputContainer>
             <StyledButton type="submit">Update</StyledButton>
           </StyledFormik>
