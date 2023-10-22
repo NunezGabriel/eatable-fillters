@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/auth-context";
 import Button from "./button";
 import Input from "./input";
@@ -35,8 +36,7 @@ export default function SignupForm() {
 
   function handleFormChange(event) {
     const { name, value } = event.target;
-    console.log(name);
-    console.log(value);
+
     setForm({ ...form, [name]: value });
     setErrors({ ...errors, [name]: "" });
   }
@@ -61,6 +61,7 @@ export default function SignupForm() {
         onChange={handleFormChange}
         error={errors.password.toString()}
       />
+      {/* <NavLink to="/profile">      </NavLink> */}
       <Button fullWidth type="submit">
         Sign-up
       </Button>

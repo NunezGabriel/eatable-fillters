@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import HeaderNav from "./components/header-nav";
 import LoginForm from "./components/login-form";
@@ -14,6 +15,13 @@ const ContainerLogin = styled.div`
 `;
 
 function UnauthenticatedApp() {
+  //   const [showLogin, setShowLogin] = useState(true);
+
+  //   function handleButtonClick(event) {
+  //     event.preventDefault();
+  //     setShowLogin(event.target.textContent === "Login");
+  //   }
+
   return (
     <ContainerLogin>
       <HeaderNav />
@@ -26,3 +34,5 @@ function UnauthenticatedApp() {
 }
 
 export default UnauthenticatedApp;
+
+// {showLogin ? <LoginForm /> : <SignupForm />}

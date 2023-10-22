@@ -5,6 +5,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { StyledButton } from "../components/button";
 import { InputContainer, Label } from "../components/input";
 import { useAuth } from "../context/auth-context";
+// import { updateUser } from "../services/users-service";
 import { typography } from "../styles/typography";
 import "../components/styles.css";
 
@@ -22,17 +23,13 @@ const StyledFormik = styled(Form)`
   align-items: center;
   gap: 2rem;
   min-width: 258px;
-  margin-bottom: 25px;
-  padding: 30px;
-  background-color: white;
-  border-radius: 20px
 `;
 
-const InputPersonalInfo = styled(Field)`
+const StyledInputFormik = styled(Field)`
   padding: 0.5rem;
   ${typography.size.m};
   border: 0;
-  border-bottom: 2px solid #FA4A0C;
+  border-bottom: 2px solid gray;
   background: transparent;
   outline: none;
 `;
@@ -84,20 +81,20 @@ function ProfilePage() {
           <StyledFormik>
             <InputContainer>
               <Label>Name</Label>
-              <InputPersonalInfo type="text" name="name" value={"your name"}/>
+              <StyledInputFormik type="text" name="name" />
             </InputContainer>
             <InputContainer>
               <Label>Email</Label>
-              <InputPersonalInfo type="email" name="email" />
-              <ErrorMessage name="email" component="p" className="error"/>
+              <StyledInputFormik type="email" name="email" />
+              <ErrorMessage name="email" component="p" className="error" />
             </InputContainer>
             <InputContainer>
               <Label>Phone</Label>
-              <InputPersonalInfo type="text" name="phone" value={"your phone"}/>
+              <StyledInputFormik type="text" name="phone" />
             </InputContainer>
             <InputContainer>
               <Label>Address</Label>
-              <InputPersonalInfo type="text" name="address" value={"fondo de vikini c-12"}/>
+              <StyledInputFormik type="text" name="address" />
             </InputContainer>
             <StyledButton type="submit">Update</StyledButton>
           </StyledFormik>

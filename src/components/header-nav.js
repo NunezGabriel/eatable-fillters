@@ -53,6 +53,11 @@ const LinkNavigate = styled.div`
   gap: 5rem;
 `;
 
+// function handleButtonClick(event) {
+//   event.preventDefault();
+//   setShowLogin(event.target.textContent === "Login");
+// }
+
 const HeaderNav = () => {
   return (
     <CardLogin>
