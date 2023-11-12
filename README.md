@@ -3,7 +3,7 @@
 ![Eatable protoype](/public/eatable.jpg)
 
 Eats Inc. is developing a new idea in the food-tech industry: "Eatable". They have hired your team to build an MVP for the web app. The stakes are high and the time is short but you and your team are confident in your abilities to finish on time.
-Requirements
+Requirements 
 
 ## Resources
 
